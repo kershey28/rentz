@@ -1,0 +1,18 @@
+@mixin vignette($key: top) {
+  &::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+    height: 100%;
+
+    background-image: linear-gradient(
+      to $key,
+      var(--clr-primary-opacity-500),
+      var(--clr-primary-opacity-500),
+      var(--clr-primary-opacity-400),
+      transparent,
+      transparent
+    );
+    @content;
+  }
+}

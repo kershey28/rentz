@@ -1,0 +1,85 @@
+@use '../../styles/abstracts/variables';
+
+@mixin btn-regular($type) {
+  & {
+    //sizing
+    padding: 1.5rem 3rem;
+    width: max-content;
+
+    //typography
+    text-decoration: none;
+    font-family: var(--ff-accent);
+    font-size: var(--fs-label);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    //styling
+    border-radius: 15px;
+    transition: all 0.2s;
+
+    //default
+    appearance: none;
+    cursor: pointer;
+
+    //layout
+    display: inline-block;
+    position: relative;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  @if $type == primary {
+    background-color: var(--clr-primary-300);
+    color: inherit;
+    box-shadow: variables.$shadow-neon-light;
+    border: 1px solid var(--clr-primary-400);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--clr-neutral-300);
+      color: var(--clr-primary-500);
+    }
+  }
+
+  @if $type == ghost {
+    background-color: transparent;
+    box-shadow: variables.$shadow-neon-light;
+    border: 1px solid var(--clr-accent-300);
+    color: var(--clr-accent-300);
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: variables.$shadow-neon-light;
+    }
+  }
+
+  @content;
+}
+
+.btnCTA {
+  @include btn-regular(primary);
+
+  &:disabled {
+    color: var(--clr-neutral-700);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.btnGhost {
+  @include btn-regular(ghost);
+}

@@ -1,0 +1,85 @@
+@use './../../styles/abstracts/breakpoints';
+
+.container {
+  position: relative;
+}
+
+.form-control input,
+.form-control label {
+  display: block;
+}
+
+.form-control label {
+  margin-bottom: 0.5rem;
+}
+
+.form-control input,
+.form-control select {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 25rem;
+
+  &::placeholder {
+    opacity: 0.6;
+  }
+
+  @include breakpoints.respond(phone-reg) {
+    width: 20rem;
+  }
+}
+
+.form-control input:focus {
+  outline: none;
+  background-color: var(--clr-neutral-100);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.guideBox {
+  display: flex;
+  justify-content: center;
+}
+
+.guide {
+  font-weight: 200;
+  margin-bottom: 3rem;
+  text-align: center;
+  display: inline;
+}
+
+.svg {
+  display: inline;
+}
+
+.btn {
+  position: absolute;
+  bottom: -5rem;
+  right: -1rem;
+}
+
+// Invalid
+.invalid input {
+  background-color: #fddddd;
+}
+
+.invalid input:focus {
+  background-color: #fbe8d2;
+}
+
+.error-text {
+  color: var(--clr-neutral-500);
+  font-size: var(--fs-caption);
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  font-size: var(--fs-caption);
+}

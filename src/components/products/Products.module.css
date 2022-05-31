@@ -1,0 +1,27 @@
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  row-gap: 10rem;
+  list-style: none;
+  width: 100%;
+  padding-inline: 5rem;
+  margin-bottom: 15rem;
+}
+@media only screen and (max-width: 75em) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .content {
+    padding-inline: 3rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .content {
+    padding-inline: 1rem;
+  }
+}/*# sourceMappingURL=Products.module.css.map */

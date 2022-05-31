@@ -1,13 +1,174 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+$color-primary: #110F26
+$color-secondaryt : #7E18C3
+$color-tertiary: #66c6ff
+*/
+:root {
+  --clr-primary-100: hsl(245.2deg, 43.4%, 20.4%);
+  --clr-primary-200: hsl(245.2deg, 43.4%, 15.4%);
+  --clr-primary-300: hsl(245.2deg, 43.4%, 10.4%);
+  --clr-primary-400: hsl(245.2deg, 43.4%, 5.4%);
+  --clr-primary-500: hsl(245.2deg, 43.4%, 0.4%);
+  --clr-secondary-100: hsl(275.8deg, 78.1%, 52.9%);
+  --clr-secondary-200: hsl(275.8deg, 78.1%, 47.9%);
+  --clr-secondary-300: hsl(275.8deg, 78.1%, 42.9%);
+  --clr-secondary-400: hsl(275.8deg, 78.1%, 37.9%);
+  --clr-secondary-500: hsl(275.8deg, 78.1%, 32.9%);
+  --clr-tertiary-100: hsl(202.4deg, 100%, 80%);
+  --clr-tertiary-200: hsl(202.4deg, 100%, 75%);
+  --clr-tertiary-300: hsl(202.4deg, 100%, 70%);
+  --clr-tertiary-400: hsl(202.4deg, 100%, 65%);
+  --clr-tertiary-500: hsl(202.4deg, 100%, 60%);
+  --clr-neutral-100: hsl(0deg, 0%, 100%);
+  --clr-neutral-200: hsl(0deg, 0%, 87%);
+  --clr-neutral-300: hsl(0deg, 0%, 80%);
+  --clr-neutral-400: hsl(0deg, 0%, 60%);
+  --clr-neutral-500: hsl(0deg, 0%, 50%);
+  --clr-neutral-600: hsl(0deg, 0%, 40%);
+  --clr-neutral-700: hsl(0deg, 0%, 30%);
+  --clr-neutral-800: hsl(0deg, 0%, 15%);
+  --clr-neutral-900: hsl(0deg, 0%, 0%);
+  --clr-primary-opacity-100: hsla(245.2deg, 43.4%, 5.4%, 0.1);
+  --clr-primary-opacity-200: hsla(245.2deg, 43.4%, 5.4%, 0.2);
+  --clr-primary-opacity-300: hsla(245.2deg, 43.4%, 5.4%, 0.4);
+  --clr-primary-opacity-400: hsla(245.2deg, 43.4%, 5.4%, 0.6);
+  --clr-primary-opacity-500: hsla(245.2deg, 43.4%, 5.4%, 0.8);
+  --clr-secondary-opacity-100: hsla(275.8deg, 78.1%, 42.9%, 0.1);
+  --clr-secondary-opacity-200: hsla(275.8deg, 78.1%, 42.9%, 0.2);
+  --clr-secondary-opacity-300: hsla(275.8deg, 78.1%, 42.9%, 0.4);
+  --clr-secondary-opacity-400: hsla(275.8deg, 78.1%, 42.9%, 0.6);
+  --clr-secondary-opacity-500: hsla(275.8deg, 78.1%, 42.9%, 0.8);
+  --clr-tertiary-opacity-100: hsla(202.4deg, 100%, 70%, 0.1);
+  --clr-tertiary-opacity-200: hsla(202.4deg, 100%, 70%, 0.2);
+  --clr-tertiary-opacity-300: hsla(202.4deg, 100%, 70%, 0.4);
+  --clr-tertiary-opacity-400: hsla(202.4deg, 100%, 70%, 0.6);
+  --clr-tertiary-opacity-500: hsla(202.4deg, 100%, 70%, 0.8);
+  --clr-white-opacity-100: hsla(0deg, 0%, 100%, 0.2);
+  --clr-white-opacity-200: hsla(0deg, 0%, 100%, 0.4);
+  --clr-white-opacity-300: hsla(0deg, 0%, 100%, 0.6);
+  --clr-white-opacity-400: hsla(0deg, 0%, 100%, 0.8);
+  --clr-white-opacity-500: hsl(0deg, 0%, 100%);
+  --clr-black-opacity-100: hsla(0deg, 0%, 0%, 0.2);
+  --clr-black-opacity-200: hsla(0deg, 0%, 0%, 0.4);
+  --clr-black-opacity-300: hsla(0deg, 0%, 0%, 0.6);
+  --clr-black-opacity-400: hsla(0deg, 0%, 0%, 0.8);
+  --clr-black-opacity-500: hsl(0deg, 0%, 0%);
+  --clr-grey-opacity-100: hsla(0deg, 0%, 30%, 0.2);
+  --clr-grey-opacity-200: hsla(0deg, 0%, 30%, 0.4);
+  --clr-grey-opacity-300: hsla(0deg, 0%, 30%, 0.6);
+  --clr-grey-opacity-400: hsla(0deg, 0%, 30%, 0.8);
+  --clr-grey-opacity-500: hsl(0deg, 0%, 30%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Font Sizes  */
+:root {
+  /* Font Sizes  */
+  --fs-display: 12rem;
+  --fs-heading: 3.6rem;
+  --fs-subheading: 2.4rem;
+  --fs-label: 1.8rem;
+  --fs-body: 1.4rem;
+  --fs-caption: 1rem;
+  /* Font Family */
+  --ff-primary: "Poppins", sans-serif;
+  --ff-accent: "Poiret One", sans-serif;
 }
+@media only screen and (max-width: 37.5em) {
+  :root {
+    --fs-display: 6.5rem;
+    --fs-heading: 3rem;
+    --fs-subheading: 2rem;
+    --fs-label: 1.4rem;
+    --fs-body: 1rem;
+    --fs-caption: 0.8rem;
+  }
+}
+
+.heading-display {
+  font-size: var(--fs-display);
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.heading-1 {
+  font-size: var(--fs-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.heading-2 {
+  font-size: var(--fs-subheading);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.heading-3 {
+  font-size: var(--fs-label);
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.caption {
+  font-size: var(--fs-caption);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--clr-neutral-200);
+  background-color: var(--clr-primary-400);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+}
+
+::-moz-selection {
+  background-color: var(--clr-secondary-opacity-100);
+}
+
+::selection {
+  background-color: var(--clr-secondary-opacity-100);
+}
+
+.container-main {
+  background-color: var(--clr-primary-400);
+  overflow: hidden;
+}
+
+/*
+price
+*/
+.navSticky {
+  position: fixed;
+  background-color: var(--clr-primary-400);
+}
+
+.navAbsolute {
+  position: absolute;
+  background-color: transparent;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.moveInLeft {
+  -webkit-animation: moveInLeft 1.5s backwards ease-out 1s;
+          animation: moveInLeft 1.5s backwards ease-out 1s;
+}/*# sourceMappingURL=index.css.map */

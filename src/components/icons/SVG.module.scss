@@ -1,0 +1,48 @@
+@mixin icon($type) {
+  & {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  @if $type == primary {
+    fill: var(--clr-primary-300);
+  }
+
+  @if $type == secondary {
+    fill: var(--clr-secondary-300);
+  }
+
+  @if $type == tertiary {
+    fill: var(--clr-tertiary-100);
+  }
+
+  @if $type == light {
+    fill: var(--clr-neutral-100);
+  }
+
+  @content;
+}
+
+.iconShop {
+  fill: var(--clr-neutral-400);
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.iconStars {
+  fill: var(--clr-secondary-400);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.iconClose {
+  fill: var(--clr-neutral-300);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.iconForm {
+  fill: var(--clr-neutral-400);
+  height: 4rem;
+  width: 4rem;
+}

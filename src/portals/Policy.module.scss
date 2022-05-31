@@ -1,0 +1,33 @@
+@use './../styles/utilities/flow';
+
+.container {
+  //layout
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  //others
+  margin-bottom: flow.$margin-md;
+}
+
+.heading {
+  margin-block: flow.$margin-md;
+  text-align: center;
+}
+
+.list {
+  padding-inline: flow.$padding-md;
+  color: var(--clr-neutral-500);
+
+  & > * {
+    margin-bottom: flow.$margin-sm;
+    &::marker {
+      color: var(--clr-secondary-400);
+    }
+  }
+}
+
+.itemStress {
+  color: var(--clr-neutral-200);
+}

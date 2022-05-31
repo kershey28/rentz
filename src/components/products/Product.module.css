@@ -1,0 +1,54 @@
+.container {
+  border-radius: 15px;
+  border: 1px solid var(--clr-primary-300);
+  padding: 1rem 2rem;
+  box-shadow: 0 2.5rem 5rem var(--clr-secondary-opacity-300), 0 -1rem 1rem var(--clr-tertiary-opacity-300);
+}
+.container:hover .img {
+  transform: scale(1.1);
+}
+
+.img {
+  height: 30rem;
+  width: 50rem;
+  transition: all 0.3s ease-out;
+}
+@media only screen and (max-width: 37.5em) {
+  .img {
+    height: 25rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .img {
+    height: 20rem;
+    width: 100%;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.model {
+  font-family: var(--ff-accent);
+}
+
+.displacement {
+  opacity: 0.4;
+}
+
+.price {
+  color: var(--clr-neutral-400);
+}
+
+.btn {
+  align-self: flex-end;
+}
+
+.notAvailable {
+  opacity: 0.4;
+  position: absolute;
+}/*# sourceMappingURL=Product.module.css.map */

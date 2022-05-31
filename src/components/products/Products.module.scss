@@ -1,0 +1,31 @@
+@use '../../styles/abstracts/breakpoints';
+@use '../../styles/utilities/flow';
+
+//children-1
+.content {
+  //layout
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  row-gap: 10rem;
+
+  //others
+  list-style: none;
+  width: 100%;
+  padding-inline: flow.$padding-md;
+  margin-bottom: flow.$margin-hg;
+
+  @include breakpoints.respond(tab-land) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include breakpoints.respond(phone-reg) {
+    padding-inline: flow.$padding-sm;
+  }
+
+  @include breakpoints.respond(phone-mini) {
+    padding-inline: flow.$padding-mn;
+  }
+}

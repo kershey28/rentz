@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.heading {
+  margin-block: 5rem;
+  text-align: center;
+}
+
+.list {
+  padding-inline: 5rem;
+  color: var(--clr-neutral-500);
+}
+.list > * {
+  margin-bottom: 1.5rem;
+}
+.list > *::marker {
+  color: var(--clr-secondary-400);
+}
+
+.itemStress {
+  color: var(--clr-neutral-200);
+}/*# sourceMappingURL=Policy.module.css.map */

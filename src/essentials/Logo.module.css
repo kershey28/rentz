@@ -1,0 +1,26 @@
+.container {
+  display: inline-block;
+  background-color: var(--clr-primary-400);
+  border: 1px solid var(--clr-neutral-600);
+  padding: 0.2rem 0.5rem;
+  transform: rotate(25deg);
+}
+
+.text {
+  font-weight: 200;
+  text-transform: uppercase;
+  color: var(--clr-neutral-200);
+  letter-spacing: 0.3rem;
+  font-family: var(--ff-accent);
+  font-size: var(--fs-subheading);
+}
+
+.imgBox {
+  display: inline;
+  position: relative;
+  top: 0.5rem;
+}
+
+.logo {
+  transform: rotate(-25deg);
+}/*# sourceMappingURL=Logo.module.css.map */

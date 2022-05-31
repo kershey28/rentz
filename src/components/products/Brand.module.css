@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  position: relative;
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    flex-direction: column-reverse;
+  }
+}
+
+.content {
+  max-width: 30rem;
+  z-index: 2;
+}
+
+.img {
+  width: 18rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .title {
+    text-align: center;
+  }
+}
+
+.description {
+  opacity: 0.4;
+}/*# sourceMappingURL=Brand.module.css.map */

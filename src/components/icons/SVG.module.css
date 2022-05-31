@@ -1,0 +1,23 @@
+.iconShop {
+  fill: var(--clr-neutral-400);
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.iconStars {
+  fill: var(--clr-secondary-400);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.iconClose {
+  fill: var(--clr-neutral-300);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.iconForm {
+  fill: var(--clr-neutral-400);
+  height: 4rem;
+  width: 4rem;
+}/*# sourceMappingURL=SVG.module.css.map */

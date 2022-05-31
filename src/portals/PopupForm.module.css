@@ -1,0 +1,13 @@
+.container {
+  padding-bottom: 5rem;
+}
+
+.btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.submitMessage {
+  padding: 2rem 3rem;
+}/*# sourceMappingURL=PopupForm.module.css.map */

@@ -1,0 +1,83 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    height: 20rem;
+  }
+}
+
+.title {
+  position: absolute;
+  top: 5%;
+  -webkit-text-stroke: 3px var(--clr-neutral-600);
+  color: transparent;
+  font-weight: 400;
+}
+@media only screen and (max-width: 37.5em) {
+  .title {
+    position: relative;
+    top: 50%;
+  }
+}
+
+.imgBox {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.imgBox::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  height: 100%;
+  background-image: linear-gradient(to top, var(--clr-primary-opacity-500), var(--clr-primary-opacity-500), var(--clr-primary-opacity-400), transparent, transparent);
+}
+@media only screen and (max-width: 37.5em) {
+  .imgBox {
+    display: none;
+  }
+}
+
+.img {
+  -webkit-animation: moveInLeft 1.5s backwards ease-out 1s;
+          animation: moveInLeft 1.5s backwards ease-out 1s;
+}
+@media only screen and (max-width: 56.25em) {
+  .img {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-25rem);
+  }
+  80% {
+    transform: translateX(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-25rem);
+  }
+  80% {
+    transform: translateX(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}/*# sourceMappingURL=Showcase.module.css.map */

@@ -1,0 +1,60 @@
+@use './../../styles/utilities/flow';
+@use './../../styles/abstracts/breakpoints';
+@use './../../styles/abstracts/variables';
+@use './../../styles/abstracts/mixins';
+
+//parent
+.container {
+  border-radius: 15px;
+  border: 1px solid var(--clr-primary-300);
+  padding: 1rem 2rem;
+  box-shadow: variables.$shadow-neon-light;
+
+  &:hover .img {
+    transform: scale(1.1);
+  }
+}
+
+.img {
+  height: 30rem;
+  width: 50rem;
+  transition: all 0.3s ease-out;
+
+  @include breakpoints.respond(phone-reg) {
+    height: 25rem;
+    width: 100%;
+  }
+
+  @include breakpoints.respond(phone-mini) {
+    height: 20rem;
+    width: 100%;
+  }
+}
+
+//children-2
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.model {
+  font-family: var(--ff-accent);
+}
+
+.displacement {
+  opacity: 0.4;
+}
+
+.price {
+  color: var(--clr-neutral-400);
+}
+
+.btn {
+  align-self: flex-end;
+}
+
+.notAvailable {
+  opacity: 0.4;
+  position: absolute;
+}

@@ -1,0 +1,19 @@
+//navigation
+.navSticky {
+  position: fixed;
+  background-color: var(--clr-primary-400);
+}
+
+.navAbsolute {
+  position: absolute;
+  background-color: transparent;
+}
+
+// Showcase
+.hidden {
+  opacity: 0;
+}
+
+.moveInLeft {
+  animation: moveInLeft 1.5s backwards ease-out 1s;
+}

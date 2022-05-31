@@ -1,0 +1,35 @@
+@use './../../styles/utilities/flow';
+@use './../../styles/abstracts/breakpoints';
+
+//parent
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  position: relative;
+
+  @include breakpoints.respond(phone-reg) {
+    flex-direction: column-reverse;
+  }
+}
+
+//children-2
+.content {
+  max-width: 30rem;
+  z-index: 2;
+}
+
+.img {
+  width: 18rem;
+}
+
+.title {
+  @include breakpoints.respond(phone-reg) {
+    text-align: center;
+  }
+}
+
+.description {
+  opacity: 0.4;
+}
