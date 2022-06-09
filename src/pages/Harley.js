@@ -82,8 +82,6 @@ const Harley = (props, ref) => {
     },
   ];
 
-  //TEST
-  console.log('Harley');
   return (
     <section className={classes.container}>
       <Showcase

@@ -82,8 +82,6 @@ const Triumph = (props, ref) => {
     },
   ];
 
-  //TEST
-  console.log('Triumph');
   return (
     <section className={classes.container}>
       <Showcase

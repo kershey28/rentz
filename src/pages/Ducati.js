@@ -82,8 +82,6 @@ const Ducati = (props, ref) => {
     },
   ];
 
-  //TEST
-  console.log('Ducati');
   return (
     <section className={classes.container}>
       <Showcase

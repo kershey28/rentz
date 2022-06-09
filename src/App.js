@@ -1,5 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import React, { useRef, useState } from 'react';
 
 import Essentials from './essentials/Essentials';
@@ -48,7 +47,7 @@ const App = () => {
 
   return (
     <div className="container-main">
-      {/* Navs */}
+      {/* Nav */}
       <Essentials showcaseRef={showcaseActiveRef} />
 
       {/* Popup */}
@@ -95,6 +94,7 @@ const App = () => {
             <Triumph ref={showcaseTriumphRef} onShowModal={showModalHandler} />
           }
         />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 
       {/* Footer */}

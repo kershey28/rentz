@@ -34,7 +34,7 @@
   transform: translateY(2px);
 }
 .btnCTA:hover, .btnCTA:focus, .btnCTA:active {
-  background-color: var(--clr-neutral-300);
+  background-color: var(--clr-tertiary-500);
   color: var(--clr-primary-500);
 }
 .btnCTA:disabled {

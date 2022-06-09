@@ -82,8 +82,6 @@ const BMW = (props, ref) => {
     },
   ];
 
-  //TEST
-  console.log('BMW');
   return (
     <section className={classes.container}>
       <Showcase

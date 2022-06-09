@@ -83,8 +83,6 @@ const Kawasaki = (props, ref) => {
     },
   ];
 
-  //TEST
-  console.log('Kawasaki');
   return (
     <section className={classes.container}>
       <Showcase
